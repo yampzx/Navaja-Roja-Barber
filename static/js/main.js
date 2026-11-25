@@ -1,11 +1,10 @@
-/* ====== EDITA AQUÍ ====== */
+
 const CONFIG = {
-  // Número en formato internacional, sin + ni espacios. Colombia = 57 + tu número.
+  
   whatsapp: "573013809211",
   mensaje: "Hola, quiero reservar un turno en Navaja Roja Barbería."
 };
 
-// Precios en pesos colombianos (son de ejemplo, cámbialos por los tuyos).
 const SERVICIOS = [
   { categoria: "Cortes", items: [
     { nombre: "Corte clásico", precio: 25000, desc: "Tijera y máquina, con acabado a navaja en la nuca y los contornos." },
@@ -26,7 +25,7 @@ const SERVICIOS = [
     { nombre: "Cejas", precio: 8000, desc: "Perfilado con navaja o pinza, como prefieras." }
   ]}
 ];
-/* ========================= */
+
 
 const wa = (texto) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(texto)}`;
 const cop = (n) => new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP", maximumFractionDigits: 0 }).format(n);
