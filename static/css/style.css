@@ -1,4 +1,4 @@
-/* Los 3 colores de la página: azul marino, rojo y blanco (como el poste de barbería) */
+
 :root{
   --navy:#12203A; --red:#D23A3F; --white:#F5F7FA;
   --muted:color-mix(in srgb,var(--white) 72%,transparent);
@@ -14,7 +14,6 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--red);outline-offset:3px}
 .wrap{width:min(var(--wrap),100% - 2.5rem);margin-inline:auto}
 
-/* Encabezado */
 .top{position:sticky;top:0;z-index:20;background:var(--navy);color:var(--white)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
 .logo{font:800 1.7rem/1 var(--display);letter-spacing:.02em;text-decoration:none;text-transform:uppercase}
@@ -23,35 +22,29 @@ a{color:inherit}
 .nav a:not(.btn){text-decoration:none;font-weight:500}
 .nav a:not(.btn):hover{color:var(--red)}
 
-/* Botones */
 .btn{display:inline-block;padding:.85rem 1.4rem;border-radius:var(--r);background:var(--red);color:var(--white);font-weight:600;text-decoration:none;border:2px solid var(--red);transition:background .2s,color .2s,border-color .2s}
 .btn:hover{background:var(--white);color:var(--red);border-color:var(--white)}
 .btn.ghost{background:transparent;border-color:var(--muted)}
 .btn.ghost:hover{background:var(--white);border-color:var(--white);color:var(--navy)}
 
-/* Portada */
 .hero{background:var(--navy);color:var(--white);padding:4.5rem 0 5rem}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:center}
 h1{font:900 clamp(3.4rem,8vw,6.4rem)/.92 var(--display);text-transform:uppercase}
 .hero p{max-width:34rem;margin:1.5rem 0 2rem;color:var(--muted);font-size:1.15rem}
 .acts{display:flex;gap:.8rem;flex-wrap:wrap}
 
-/* Fotos: si falta la imagen, se ve el patrón del poste de barbería */
 .photo{aspect-ratio:4/5;border-radius:var(--r);background-size:cover,auto;background-position:center;background-repeat:no-repeat,repeat}
 .img-hero{background-image:url(../images/hero.jpg),repeating-linear-gradient(-45deg,var(--red) 0 22px,var(--white) 22px 44px,var(--navy) 44px 66px)}
 .img-local{background-image:url(../images/local.jpg),repeating-linear-gradient(-45deg,var(--red) 0 22px,var(--white) 22px 44px,var(--navy) 44px 66px)}
 
-/* Franja del poste: el único elemento con movimiento */
 .pole{height:16px;background:repeating-linear-gradient(-45deg,var(--red) 0 16px,var(--white) 16px 32px,var(--navy) 32px 48px);animation:pole 6s linear infinite}
 @keyframes pole{to{background-position:68px 0}}
 
-/* Secciones */
 .sec{padding:5rem 0}
 .sec.dark{background:var(--navy);color:var(--white)}
 h2{font:800 clamp(2.4rem,5vw,3.6rem)/1 var(--display);text-transform:uppercase}
 .lead{max-width:36rem;margin-top:.8rem;opacity:.78}
 
-/* Lista de servicios */
 .menu{display:grid;grid-template-columns:repeat(2,1fr);gap:3rem 4rem;margin-top:3rem}
 .cat h3{font:800 1.8rem/1 var(--display);color:var(--red);padding-bottom:.6rem;border-bottom:3px solid var(--navy);text-transform:uppercase}
 .svc{display:grid;grid-template-columns:1fr auto;gap:.2rem 1rem;padding:1.1rem 0;border-bottom:1px solid var(--line)}
@@ -61,12 +54,10 @@ h2{font:800 clamp(2.4rem,5vw,3.6rem)/1 var(--display);text-transform:uppercase}
 .svc a{grid-column:2;grid-row:2;align-self:end;font-size:.92rem;font-weight:600;text-underline-offset:3px}
 .svc a:hover{color:var(--red)}
 
-/* Pasos */
 .steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin:3rem 0}
 .steps li{padding-top:1.2rem;border-top:3px solid var(--red);color:var(--muted)}
 .steps b{display:block;font:800 1.7rem/1.1 var(--display);color:var(--white);margin-bottom:.4rem;text-transform:uppercase}
 
-/* Visítanos */
 .visit{display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem;align-items:center}
 .info{display:grid;grid-template-columns:auto 1fr;gap:.7rem 1.5rem;margin-top:2rem}
 .info dt{font-weight:600}
@@ -86,7 +77,7 @@ h2{font:800 clamp(2.4rem,5vw,3.6rem)/1 var(--display);text-transform:uppercase}
   .pole{animation:none}
   html{scroll-behavior:auto}
 }
-/* Foto de portada: tamaño original de la foto, con bordes suaves */
+
 .hero{position:relative;overflow:hidden}
 .hero .wrap{display:block}
 .hero .wrap > div:first-child{position:relative;z-index:1;max-width:36rem}
@@ -100,7 +91,6 @@ h2{font:800 clamp(2.4rem,5vw,3.6rem)/1 var(--display);text-transform:uppercase}
   mask-image:radial-gradient(ellipse 72% 68% at 58% 50%,#000 55%,transparent 100%);
 }
 
-/* Foto de «Visítanos»: esquinas más suaves */
 .img-local{border-radius:28px;box-shadow:0 18px 40px rgba(18,32,58,.18)}
 
 @media (max-width:860px){
